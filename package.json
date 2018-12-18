@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-attribution",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-attribution",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darkniel/attribution.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Daniel Pinzón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darkniel/attribution/issues"
+  },
+  "homepage": "https://github.com/Darkniel/attribution#readme"
+}
