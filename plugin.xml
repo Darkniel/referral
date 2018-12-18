@@ -7,16 +7,16 @@
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="attribution">
-        <param name="android-package" value="cordova-plugin-attribution.attribution"/>
+        <param name="android-package" value="com.neuraweb.cordova.attribution"/>
       </feature>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml">
-      <receiver android:exported="true" android:name="cordova-plugin-attribution.attribution">
+      <receiver android:exported="true" android:name="com.neuraweb.cordova.attribution">
         <intent-filter>
           <action android:name="com.android.vending.INSTALL_REFERRER"/>
         </intent-filter>
       </receiver>
     </config-file>
-    <source-file src="src/android/attribution.java" target-dir="src/cordova-plugin-attribution/attribution"/>
+    <source-file src="src/android/attribution.java" target-dir="src/com/neuraweb/cordova/attribution"/>
   </platform>
 </plugin>
