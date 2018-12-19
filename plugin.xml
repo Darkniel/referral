@@ -7,7 +7,7 @@
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="referal">
-        <param name="android-package" value="com.neuraweb.cordova.referal"/>
+        <param name="android-package" value="com.neuraweb.cordova.referal.referal"/>
       </feature>
     </config-file>
     <source-file src="src/android/referal.java" target-dir="src/com/neuraweb/cordova/referal"/>
