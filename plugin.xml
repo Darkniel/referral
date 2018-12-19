@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-referal" version="0.0.1">
-  <name>referal</name>
-  <js-module name="referal" src="www/referal.js">
-    <clobbers target="cordova.plugins.referal"/>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-referral" version="0.0.1">
+  <name>Referral</name>
+  <js-module name="referral" src="www/referral.js">
+    <clobbers target="cordova.plugins.referral"/>
   </js-module>
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="referal">
-        <param name="android-package" value="com.neuraweb.cordova.referal.referal"/>
+      <feature name="Referral">
+        <param name="android-package" value="com.neuraweb.cordova.referral.Referral"/>
       </feature>
     </config-file>
-    <source-file src="src/android/referal.java" target-dir="src/com/neuraweb/cordova/referal"/>
+    <source-file src="src/android/Referral.java" target-dir="src/com/neuraweb/cordova/referral"/>
   </platform>
 </plugin>

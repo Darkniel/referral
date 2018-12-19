@@ -1,4 +1,4 @@
-package com.neuraweb.cordova;
+package com.neuraweb.cordova.referral;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -15,31 +15,34 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.widget.Toast;
 
 /**
  * This class echoes a string called from JavaScript.
  */
 
-public class referal extends CordovaPlugin {
+public class Referral extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("getReferer")) {
+        if (action.equals("getReferrer")) {
             String message = args.getString(0);
-            this.getReferer(message, callbackContext);
+            Toast.makeText(this.cordova.getActivity(), "Don't panik but your time is up!!!!.", Toast.LENGTH_LONG).show();
+            this.getReferrer(message, callbackContext);
             return true;
         }
         return false;
     }
-    private void getReferer(String message, CallbackContext callbackContext) {
+    private void getReferrer(String message, CallbackContext callbackContext) {
         // Context context = cordova.getActivity().getApplicationContext();
-        Context context = this.cordova.getActivity().getApplicationContext();
+        Context context = cordova.getActivity().getApplicationContext();
         // Context context = getActivity().getApplicationContext();
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String referer = preferences.getString("referrer", "");
-        if(!referer.equalsIgnoreCase(""))
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(cordova.getActivity());
+        String referrer = preferences.getString("referrer", "");
+        Toast.makeText(context, referrer, Toast.LENGTH_LONG).show();
+        if(!referrer.equalsIgnoreCase(""))
         {
-            callbackContext.success(referer);
+            callbackContext.success(referrer);
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
