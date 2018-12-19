@@ -1,7 +1,9 @@
 package com.neuraweb.cordova;
 
-import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginResult;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,9 +19,8 @@ import android.util.Log;
 /**
  * This class echoes a string called from JavaScript.
  */
-// public class attribution extends CordovaPlugin {
 public class attribution extends BroadcastReceiver {
-    @Override
+    
     public void onReceive(Context context, Intent intent) {
 
         /************* Get referrer ************/
@@ -32,8 +33,9 @@ public class attribution extends BroadcastReceiver {
         SharedPreferences.Editor edit = sharedpreferences.edit();
         edit.putString("referrer", referrer);
         edit.apply();
-		
     }
+}
+public class referal extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("getReferer")) {
@@ -43,9 +45,12 @@ public class attribution extends BroadcastReceiver {
         }
         return false;
     }
-
     private void getReferer(String message, CallbackContext callbackContext) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        // Context context = cordova.getActivity().getApplicationContext();
+        Context context = this.cordova.getActivity().getApplicationContext();
+        // Context context = getActivity().getApplicationContext();
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         String referer = preferences.getString("referrer", "");
         if(!referer.equalsIgnoreCase(""))
         {
