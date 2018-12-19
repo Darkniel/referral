@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-attribution" version="0.0.1">
-  <name>attribution</name>
-  <js-module name="attribution" src="www/attribution.js">
-    <clobbers target="cordova.plugins.attribution"/>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-referal" version="0.0.1">
+  <name>referal</name>
+  <js-module name="referal" src="www/referal.js">
+    <clobbers target="cordova.plugins.referal"/>
   </js-module>
   <platform name="android">
-    <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="attribution">
-        <param name="android-package" value="com.neuraweb.cordova.attribution"/>
-      </feature>
-    </config-file>
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="referal">
         <param name="android-package" value="com.neuraweb.cordova.referal"/>
       </feature>
     </config-file>
-    <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <receiver android:exported="true" android:name="com.neuraweb.cordova.attribution">
-        <intent-filter>
-            <action android:name="com.android.vending.INSTALL_REFERRER" />
-        </intent-filter>
-        </receiver>
-    </config-file>
-    <source-file src="src/android/attribution.java" target-dir="src/com/neuraweb/cordova/attribution"/>
+    <source-file src="src/android/referal.java" target-dir="src/com/neuraweb/cordova/referal"/>
   </platform>
 </plugin>

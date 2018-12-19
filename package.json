@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-attribution",
+  "name": "cordova-plugin-referal",
   "version": "0.0.1",
   "description": "",
   "cordova": {
-    "id": "cordova-plugin-attribution",
+    "id": "cordova-plugin-referal",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Darkniel/attribution.git"
+    "url": "git+https://github.com/Darkniel/referal.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -19,7 +19,7 @@
   "author": "Daniel Pinzón",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Darkniel/attribution/issues"
+    "url": "https://github.com/Darkniel/referal/issues"
   },
-  "homepage": "https://github.com/Darkniel/attribution#readme"
+  "homepage": "https://github.com/Darkniel/referal#readme"
 }

@@ -19,22 +19,7 @@ import android.util.Log;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class attribution extends BroadcastReceiver {
-    
-    public void onReceive(Context context, Intent intent) {
 
-        /************* Get referrer ************/
-		
-        String referrer = intent.getStringExtra("referrer");
-
-        /****************** Save Referrer Value to SharedPreferences **********************/
-
-        SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor edit = sharedpreferences.edit();
-        edit.putString("referrer", referrer);
-        edit.apply();
-    }
-}
 public class referal extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
